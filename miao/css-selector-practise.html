@@ -44,14 +44,22 @@
       .a.c span > span:last-child{
         color:blue;
       }
-      
+      .prime ul li:nth-of-type(2n):not(:nth-of-type(2)) {
+        color: red;
+      }
+      .prime ul li:nth-of-type(3n):not(:nth-of-type(3)) {
+        color: red;
+      }
+      .prime ul li:nth-of-type(5n):not(:nth-of-type(5)) {
+        color: red;
+      }
     </style>
   </head>
   
   <body>
     <p>红色</p>
 
-    <p class="a" tabindex="0">鼠标悬浮时为红色，按下去时为绿色，获得焦点时为蓝色</p>
+    <p class="a" tabindex="-1">鼠标悬浮时为红色，按下去时为绿色，获得焦点时为蓝色</p>
 
     <p class="a c">
       <span>
@@ -83,6 +91,9 @@
 
     <style>
         .a ul li:nth-child(n + 4):nth-child(-n + 7) {
+            color: red;
+        }
+        .a ul li:nth-child(n+11):nth-child(n+12) {
             color: red;
         }
     </style>
