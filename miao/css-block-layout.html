@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>css-block-layout</title>
+  <style>
+    body {
+      margin: 0;
+      min-width: 600px;
+    }
+    header{
+      background-color: #000;
+    
+    }
+    article {
+      
+      color: #fff;
+      margin-left: auto;
+      margin-right: auto;
+      width: 600px;
+    }
+    .main{
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .center{
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .center div{
+      width: 174px;
+      height: 34px;
+      border: 3px solid;
+      text-align: center;
+      line-height: 34px;
+      margin-bottom: 15px;
+      background-color: pink;
+      
+    }
+    .center div:hover{
+      background-color: red;
+    }
+    .center  div:nth-child(3n+2){
+      margin-top:-55px;
+      margin-left: 210px;
+    }
+    .center  div:nth-child(3n+3){
+      margin-top:-55px;
+      margin-left: 420px;
+    }
+    
+    .article {
+      width: 600px;
+      margin: auto;
+    }
+    .article p{
+      border-bottom: 1px dashed;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    .article p:last-child{
+      border: none;
+    }
+    footer{
+      
+      margin: auto;
+      text-align: center;
+      background-color: rgb(238,130,238);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <article>
+      hello world 请调整浏览器窗口大小查看效果
+    </article>
+  </header>
+  <div>
+    <p class="main">页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
+  </div>
+  <div class="center">
+    
+      <div>宽180高40(包含边框)</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div>水平间隙30px</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div>垂直间隙15px</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div>边框宽度3px</div>
+      <div>产品</div>
+      <div>产品</div>
+    
+  </div>
+  <div class="article">
+    <p> link</p>
+    <p> link</p>
+    <p> link</p>
+    <p>link</p>
+  </div>
+  <footer>
+    <p>©版权所有</p>
+    <p>本页所有布局均使用块元素</p>
+  </footer>
+</body>
+</html>
