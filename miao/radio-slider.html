@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>radio-slider</title>
+  <style>
+    
+    input:checked + img {
+      /* display: block; */
+      opacity: 1; 
+      transition: 2s linear;
+    }
+    .img {
+      xborder: 3px solid;
+      position: relative;
+    }
+    img {
+      position: absolute;
+      top: 100;
+      width: 100%;
+      opacity: 0;
+      /* display: none; */
+      }
+    input {
+      display: none;
+    }
+    .l {
+      position: absolute;
+      top: 70%;
+      left: 90%;
+      z-index: 6;
+    }
+    label {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      border: 3px solid grey;
+      display: inline-block;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div class="l">
+      <label for="img1"></label>
+      <label for="img2"></label>
+      <label for="img3"></label>
+      <label for="img4"></label>
+      <label for="img5"></label>
+    </div>
+  
+  
+    <div class="img">
+      <input type="radio" name="silder" id="img1" checked>
+      <img src="https://i1.mifile.cn/a4/xmad_15566146318197_mAghl.jpg" alt="">
+      <input type="radio" name="silder" id="img2">
+      <img src="https://i1.mifile.cn/a4/xmad_15529884424562_HKYaG.jpg" alt="">
+      <input type="radio" name="silder" id="img3">
+      <img src="https://i1.mifile.cn/a4/xmad_15579184778872_ECdvK.jpg" alt="">
+      <input type="radio" name="silder" id="img4">
+      <img src="https://i1.mifile.cn/a4/xmad_15548066591437_Stxlj.jpg" alt="">
+      <input type="radio" name="silder" id="img5">
+      <img src="https://i1.mifile.cn/a4/xmad_15476942061027_STEvM.jpg" alt="">
+    </div>
+</div>
+</body>
+</html>
