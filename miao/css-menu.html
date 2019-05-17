@@ -12,7 +12,7 @@
       position: absolute;
       background-color: rgba(0,0,0,0.5);
     }
-    ul ul {
+    ul ul li {
       display: none;
     }
     ul ul::before {
@@ -24,17 +24,18 @@
     li:hover {
       background-color: orange;
     }
-    li {
+    ul ul {
+      top: 0;
+      left: 100%;
+    }
+    ul li {
       position: relative;
       white-space: nowrap;
       color: white;
       padding: 10px 60px 10px 20px;
     }
-    ul > li:hover > ul  {
+    li:hover > ul > li {
       display: block; 
-      position: absolute;
-      top: 0;
-      left: 100%;
     }
     
   </style>
