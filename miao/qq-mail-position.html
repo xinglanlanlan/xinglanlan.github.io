@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>qq-mail-position</title>
+  <style> 
+    html {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    header {
+      width: 100%;
+      height: 75px;
+      background-color: rgb(96,137,212);
+      color: #fff;
+      font-size: 26px;
+    }
+    main {
+      width: 100%;
+      height: calc(100% - 75px);
+    }
+    .nav {
+      position: absolute;
+      width: 210px;
+      top: 75px;
+      bottom: 0;
+      left: 0;
+      background-color: rgb(250,248,245);
+      border-right: 3px solid #efefef;
+      border-bottom: 3px solid #efefef;
+      min-width: 210px;
+    }
+    .content {
+      position: absolute;
+      top: 75px;
+      width: calc(100% - 210px);
+      bottom: 0;
+      left: 210px;
+      right: 0;
+      overflow-y: scroll;
+    }
+    strong {
+      padding: 30px;
+      line-height: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>邮箱首页</header>
+  <main>
+    <div class="nav">收件箱</div>
+    <div class="content"><strong>你好，jkdsjfisd</strong></div>
+  </main>
+</body>
+</html>
