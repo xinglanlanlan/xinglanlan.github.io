@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>oald-layout-float</title>
+  <style>
+    html,body {
+      height: 100%;
+      margin: 0;
+    }
+    aside {
+      width: 200px;
+      height: 100%;
+      background-color: pink;
+      float:left;
+    }
+    main {
+      height: 100%;
+      background-color: lightgrey;
+    }
+    .main {
+      height: 100%;
+      overflow: hidden;
+      xmin-width: 100px;
+    }
+    .title {
+      box-sizing: border-box;
+      height: 100px;
+      border-bottom: 3px solid green;
+      background-color: lightgreen;
+    }
+    .content {
+      height: calc(100% - 100px);
+      background-color: #fff;
+    }
+    .help {
+      width: 200px;
+      height: 100%;
+      background-color: lightblue;
+      float: right;
+    }
+    .history {
+      width: 200px;
+      height: 100%;
+      background-color: yellow;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <main>
+      <aside>OALD 7</aside>
+      <div class="help">help</div>
+      <div class="history">history</div>
+      <div class="main">
+        <div class="title">word</div>
+        <div class="content">content 
+          Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit.
+          Et quaerat labore a voluptatum
+          iure nemo dolorum corrupti 
+          repudiandae architecto magnam 
+          eligendi, quas consectetur 
+          ducimus voluptatem exercitationem
+          molestias nobis, neque odio.
+        </div>
+      </div>
+    </main>
+
+</body>
+</html>
