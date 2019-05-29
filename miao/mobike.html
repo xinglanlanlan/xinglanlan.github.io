@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>mobile</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    ul {
+      list-style-type: none;
+    }
+    header {
+      position: relative;
+    }
+    header ul ul {
+      display: none;
+    }
+    .header-img {
+      background-image: url(https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-8.jpg);
+      background-repeat: no-repeat;
+      background-position: 50% 35%;
+      width: 100%;
+      height: 800px;
+    }
+    header > ul {
+      position: absolute;
+      top: 0;
+      right: 300px;
+      color: #fff;
+      
+    }
+    header > ul > li {
+      float: left;
+      padding: 30px;
+    } 
+    .header-news {
+      margin-top: -65px;
+      line-height: 44px;
+      background-color: rgb(0,0,0,0.2);
+    }
+    .header-news span:first-child {
+      display: inline-block;
+      width: 430px;
+    }
+    .header-news span:last-child {
+      font-size: 14px;
+      color: #fff;
+    }
+    .header-news span:last-child:before {
+      font-size: 10px;
+      content: "NEWS";
+      color: #fff;
+      background-color: rgb(251,56,53);
+      width: 54px;
+      height: 18px;
+      border-radius: 0.2em;
+    }
+    .ad-fourimg {
+      font-size: 0;
+      margin-top: 1px;
+    }
+    .ad-fourimg * {
+      font-size: inherit;
+    }
+    .ad-fourimg span {
+      display: inline-block;
+      height: 260px;
+      font-size: 26px;
+      color: #fff;
+      text-align: center;
+      line-height: 100px;
+      box-sizing: border-box;
+    }
+    .ad-fourimg span:first-child {
+      background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-01.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+    .ad-fourimg span:nth-child(2) {
+      background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-02.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      background-size: cover;
+    }
+    .ad-fourimg span:nth-child(3) {
+      background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-03.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      background-size: cover;
+    }
+    .ad-fourimg span:last-child {
+      background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-04.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      background-size: cover;
+    }
+    .ad-three {
+      border-bottom: 1px solid #efefef;
+    }
+    .ad-three-center {
+      width: 55%;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+    }
+    .ad-three-center div {
+      float: left;
+      line-height: 142px;
+      width: 33.33%;
+    }
+    .ad-three-center div:nth-child(2) {
+      text-align: center;
+    }
+    .ad-three-center div:last-child {
+      text-align: right;
+    }
+    .ad-three-center div span {
+      display: inline-block;
+    }
+    .ad-three-center div span > span {
+      display: block;
+      line-height: normal;
+    }
+    .ad-three-detail {
+      font-weight: 111;
+    }
+    .ad-three-center img {
+      width: 46px;
+      vertical-align: -10px;
+      margin-right: 5px;
+    }
+
+    footer {
+      border-bottom: 1px solid #efefef;
+    }
+    .footer-center {
+      width: 55%;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+      line-height: 100px;
+    }
+    .footer-center * {
+      line-height: 2.3;
+    }
+    .footer-center div {
+      float: left;
+      margin-top: 30px;
+    }
+    .footer-center img {
+      width: 160px;
+    }
+    .footer-center span {
+      display: block;
+    }
+    .footer-center ul {
+      float: left;
+      font-weight: 777;
+      padding: 0;
+      margin: 0;
+      padding-left: 132px;
+    }
+    .footer-center li{
+      font-weight: 111;
+    }
+    .footer-center li strong {
+      font-weight: normal;
+    }
+
+    .bottom-center {
+      width: 55%;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+    }
+    .bottom-center > img {
+      width: 46px;
+      float: right;
+    }
+    .bottom-center span {
+      display: block;
+    }
+    .bottom-center span img {
+      width: 18px;
+    }
+    .bottom-left {
+      display: inline-block;
+      xfloat: left;
+      
+    }
+    @media screen and (min-width: 1070px) {
+      .ad-fourimg span {
+        width: 24.8%;
+      }
+      .ad-fourimg span:nth-child(2),.ad-fourimg span:nth-child(3),.ad-fourimg span:last-child {
+        margin-left: 2px;
+      }
+    }
+    @media screen and (min-width: 630px) and (max-width: 1070px) {
+      .ad-fourimg span {
+        width: 49.8%;
+      }
+      .ad-fourimg span:nth-child(2),.ad-fourimg span:last-child {
+        margin-left: 2px;
+      }
+      .ad-fourimg span:nth-child(2),.ad-fourimg span:last-child {
+        margin-top: 2px;
+      }
+    }
+    @media screen and (max-width: 630px) {
+      .ad-fourimg span {
+        width: 100%;
+      }
+      .ad-fourimg span:nth-child(2),.ad-fourimg span:nth-child(3),.ad-fourimg span:last-child {
+        margin-top: 2px;
+      }
+      .ad-three-center div {
+        width: 50%;
+      }
+      .ad-three-center img {
+        width: 40px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+    <header>
+      <div class="header-img"></div>
+      <!-- <img src="https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-8.jpg" alt="" class="header-img"> -->
+      <img src="" alt="" class="logo" class="header-logo">
+      <ul>
+        <li>产品
+          <ul>
+            <li>经典版
+              <span>轻便可靠</span>
+            </li>
+            <li>轻骑
+              <span>城市随处可骑行</span>
+            </li>
+            <li>智能锁
+              <span>摩拜智造，天生靠得住</span>
+            </li>
+          </ul>
+        </li>
+        <li>膜拜科技</li>
+        <li>关于</li>
+        <li>广告合作</li>
+      </ul>
+        <div class="header-news">
+          <span></span>
+          <span>“摩拜公交”小程序上线，线上购买地铁飘省时省力</span>
+        </div>
+    </header>
+    <div class="ad-fourimg">
+      <span>大国品牌</span>
+      <span>摩拜科技</span>
+      <span>摩拜生活</span>
+      <span>摩拜校招</span>
+    </div>
+    <div class="ad-three">
+      <div class="ad-three-center">
+        <div>
+          <img src="https://mobike.com/cn/assets/themes/moby/img/icon-wechat.png" alt="">
+          <span>
+            <span>微信小程序</span>
+            <span class="ad-three-detail">微信扫一扫，直接用车</span>
+          </span>
+        </div>
+        <div>
+          <img src="https://mobike.com/cn/assets/themes/moby/img/icon-rp.png" alt="">
+          <span>
+            <span style="text-align: left">红包车</span>
+            <span class="ad-three-detail">骑摩拜，能赚钱</span>
+        </span>
+        </div>
+        <div>
+          <img src="https://mobike.com/cn/assets/themes/moby/img/icon-credit.png" alt="">
+          <span>
+            <span style="text-align: left">摩范分</span>
+            <span class="ad-three-detail">文明骑行，信用生活</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-center">
+        <div>
+          <img src="https://mobike.com/cn/assets/themes/moby/img/logo-text.svg" alt="">
+          <span>Beijing Mobike Technology Co., Ltd</span>
+          <span>客服电话 400-811-7799</span>
+          <span>北京摩拜科技有限公司</span>
+        </div>
+        <div>
+          <ul>产品
+            <li>经典版</li>
+            <li>轻骑</li>
+            <li>智能锁</li>
+          </ul>
+          <ul>生活
+            <li>城小</li>
+          </ul>
+          <ul>关于
+            <li>关于<strong>Mobike</strong></li>
+            <li>加入我们</li>
+            <li>联系我们</li>
+            <li>服务协议</li>
+          </ul>
+          <ul>社交网络
+            <li>微博</strong></li>
+            <li>微信</li>
+            <li>知乎专栏</li>
+            <li><strong>Facebook</strong></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="bottom">
+      <div class="bottom-center">
+        <div class="bottom-left">
+          <span>京 ICP 备15053449 号  <img src="https://mobike.com/cn/assets/themes/moby/img/beian-icon.png" alt="">京公网安备 11010502032956 号 </span>
+          <span>增值电信业务经营许可证编号：京B2-20170053</span>
+        </div>
+        <img src="https://mobike.com/cn/assets/themes/moby/img/footer-chengxin.jpg" alt="">
+      </div>
+    </div>
+</body>
+</html>
