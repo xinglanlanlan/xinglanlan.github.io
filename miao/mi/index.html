@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="iconfont.css">
+  <title>mi-index</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    a:hover {
+      cursor: pointer;
+    }
+    header a {
+      text-decoration: none;
+      color: rgb(176,176,176);
+    }
+    header {
+      background-color: rgb(51,51,51);
+      height: 42px;
+      min-width: 1226px;
+    }
+    header .header-center {
+      width: 1226px;
+      margin: 0 auto;
+      font-size: 12px;
+      overflow: hidden;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    header ul {
+      float: left;
+      overflow: hidden;
+    }
+    header li {
+      float: left;
+      line-height: 42px;
+      padding-right: 10px;
+    }
+    header li + span {
+      float: left;
+      line-height: 42px;
+      color: rgb(60,66,55);
+    }
+    header li a:hover,.header-right-left a:hover {
+      color: #fff;
+    }
+    .header-right-left,.header-shopping {
+      float: right;
+      line-height: 42px;
+    }
+    .header-right-left {
+      margin: 0 10px 0 0;
+    }
+    .header-shopping {
+      padding: 0 30px;
+      position: relative;
+    }
+    .header-shopping:hover {
+      background-color: #fff;
+    }
+    .header-shopping:hover a {
+      color: rgb(255,103,0);
+    }
+    .header-shopping i {
+      display: inline-block;
+      background-image: url(header-shopping.png);
+      width: 25px;
+      height: 25px;
+      background-repeat: no-repeat;
+      background-position: -5px 2px;
+      vertical-align: -5px;
+    }
+    .header-shopping:hover i {
+      background-position: -42px;
+    }
+    .header-shopping:hover::after {
+      content: "购物车中还没有商品，赶紧选购吧！";
+      text-align: center;
+      line-height: 100px;
+      display: block;
+      width: 320px;
+      height: 100px;
+      box-shadow: 0 0 10px #999;
+      position: absolute;
+      right: 0;
+      top: 42px;
+      transition: 1s ease-in;
+    }
+    .header-download {
+      position: relative;
+    }
+    .header-download:hover::after {
+      content: "";
+      display: inline-block;
+      border-bottom: 10px solid #fff;
+      border-top: 10px solid rgba(255,0,255,0);
+      border-right: 8px solid rgba(0,255,0,0);
+      border-left: 8px solid rgba(255,0,0,0);
+      top: 22px;
+      left: 18px;
+      position: absolute;
+      z-index: 999;
+    }
+    .header-download img {
+      display: none;
+    }
+    .header-download:hover img {
+      display: block;
+      width: 128px;
+      height: 128px;
+      box-shadow: 0 0 10px #666;
+      position: absolute;
+      left: -66%;
+      top: 42px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-center">
+      <ul>
+        <li><a>小米商城</a></li>
+        <span>|</span>
+        <li><a>MIUI</a></li>
+        <span>|</span>
+        <li><a>IoT</a></li>
+        <span>|</span>
+        <li><a>云服务</a></li>
+        <span>|</span>
+        <li><a>金融</a></li>
+        <span>|</span>
+        <li><a>有品</a></li>
+        <span>|</span>
+        <li><a>小爱开放平台</a></li>
+        <span>|</span>
+        <li><a>企业团购</a></li>
+        <span>|</span>
+        <li><a>资质证照</a></li>
+        <span>|</span>
+        <li><a>协议规则</a></li>
+        <span>|</span>
+        <li class="header-download">
+          <a>下载app
+            <img src="https://i1.mifile.cn/f/i/17/appdownload/download.png?1" alt="">
+          </a>
+        </li>
+        <span>|</span>
+        <li><a>Select Region</a></li>
+        <span>|</span>
+      </ul>
+      <div class="header-shopping">
+        <span>
+          <i class="icon-shopping"></i>
+          <a href="">购物车(0)</a>
+        </span>
+      </div>
+      <div class="header-right-left">
+        <span><a href="">登录</a></span>
+        <span>|</span>
+        <span><a href="">注册</a></span>
+        <span>|</span>
+        <span><a href="">消息通知</a></span>
+      </div>
+        
+      
+    </div>
+  </header>
+
+<style>
+  .nav-center {
+    width: 1226px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .logo {
+    width: 55px;
+    float: left;
+    margin-top: 22px;
+  }
+  .nav-center ul {
+    float: left;
+    overflow: hidden;
+    margin-left: 190px;
+  }
+  .nav-center li {
+    float: left;
+    padding-right: 20px;
+    line-height: 100px;
+    font-size: 12x;
+  }
+  nav li:hover {
+    color: rgb(255,103,0);
+  }
+  nav form {
+    float: right;
+    width: 290px;
+    height: 50px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    font-size: 0;
+  }
+  nav form * {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  nav form input:first-child {
+    width: 243px;
+    height: 50px;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+  }
+  nav form input:last-child {
+    width: 40px;
+    height: 50px;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    margin-left: -1px;
+    vertical-align: bottom;
+    padding-right: 39px;
+  }
+  
+  nav ul ul {
+    display: none;
+  }
+  
+</style>
+  <nav>
+    <div class="nav-center">
+      <img class="logo" src="data:image/jpeg;base64,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" alt="">
+      <ul class="nav-top">
+        <li>小米手机
+          <ul>
+            <li>
+              <span>新品</span>
+              <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mi9-320.png" alt="">
+              <span>小米9</span>
+              <span>2999元 </span>
+            </li>
+            <li>
+              <span>新品</span>
+              <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mi9-320.png" alt="">
+              <span>小米9</span>
+              <span>2999元</span>
+            </li>
+            <li>
+              <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mi9-320.png" alt="">
+              <span>小米9</span>
+              <span>2999元</span>
+            </li>
+            <li>
+              <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mi9-320.png" alt="">
+              <span>小米9</span>
+              <span>2999元</span>
+            </li>
+            <li>
+              <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mi9-320.png" alt="">
+              <span>小米9</span>
+              <span>2999元</span>
+            </li>
+            <li>
+              <span>新品</span>
+              <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/mi9-320.png" alt="">
+              <span>小米9</span>
+              <span>2999元</span>
+            </li>
+          </ul>
+        </li>
+        <li>红米</li>
+        <li>电视</li>
+        <li>笔记本</li>
+        <li>家电</li>
+        <li>新品</li>
+        <li>路由器</li>
+        <li>智能硬件</li>
+        <li>服务</li>
+        <li>社区</li>
+      </ul>
+      <form action="">
+        <input type="search">
+        <input type="submit" value="">
+      </form>
+    </div>
+  </nav>
+
+
+
+  <style>
+    .scroll-img-center {
+      width: 1226px;
+      margin-right: auto;
+      margin-left: auto;
+      position: relative;
+    }
+    .scroll-img-center .image img {
+      width: 1226px;
+      display: none;
+    }
+    .scroll-img-center .image input {
+      display: none;
+    }
+    .scroll-img-center .image input:checked + img {
+      display: block;
+    }
+    .scroll-label {
+      position: absolute;
+      right: 10px;
+      bottom: 4px;
+    }
+    .scroll-label label {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background-color: rgb(137,137,137);
+      border-radius: 999px;
+      border: 2px solid rgb(186,186,186);
+    }
+    .scroll-img-center > ul {
+      width: 230px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 12px 0;
+      background-color: rgb(0,0,0,0.6);
+    }
+    .scroll-img-center > ul > li:hover {
+      background-color: rgb(255,103,0);
+    }
+    .scroll-img-center ul ul {
+      position: absolute;
+      left: 230px;
+      top: 0;
+      background-color: #fff;
+      color: #000;
+      height: 460px;
+      border: 1px solid #e0e0e0;
+      display: none;
+    }
+    .scroll-img-center > ul > li {
+      color: #fff;
+      line-height: 44px;
+      padding-left: 20px;
+    }
+    .scroll-img-center ul ul li {
+      display: inline-block;
+      width: 248px;
+      height: 76px;
+    }
+    .scroll-img-center > ul > li:hover > ul {
+      display: block;
+      cursor: pointer; 
+      white-space: nowrap;
+    }
+    
+  </style>
+  <div class="scroll-img">
+    <div class="scroll-img-center">
+        <ul>
+          <li>手机&nbsp;&nbsp;电话卡</li>
+          <li>电视&nbsp;&nbsp;盒子</li>
+          <li>笔记本&nbsp;&nbsp;平板</li>
+          <li>家电&nbsp;&nbsp;插线板</li>
+          <li>出行&nbsp;&nbsp;穿戴
+            <ul>
+              <li>
+                <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/scooter-80.jpg?width=80&height=80" alt="">
+                <span>手环手表</span>
+
+                </li>
+              <li>
+                <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/scooter-80.jpg?width=80&height=80" alt="">
+                <span>智能后视镜</span>
+
+                </li>
+              <li>
+                <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/scooter-80.jpg?width=80&height=80" alt="">
+                <span>VR</span>
+
+                </li>
+              <li>
+                <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/scooter-80.jpg?width=80&height=80" alt="">
+                <span>智能记录仪</span>
+
+                </li>
+              <li>
+                <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/scooter-80.jpg?width=80&height=80" alt="">
+                <span>平衡车</span>
+
+                </li>
+              <li>
+                <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/scooter-80.jpg?width=80&height=80" alt="">
+                <span>车载空气净化器</span>
+
+                </li>
+              <li>
+                <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/scooter-80.jpg?width=80&height=80" alt="">
+                <span>滑板车</span>
+
+                </li>
+              <li>
+                <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/scooter-80.jpg?width=80&height=80" alt="">
+                <span>无线车充</span>
+
+                </li>
+              <li>
+                <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/scooter-80.jpg?width=80&height=80" alt="">
+                <span>车载逆变器</span>
+
+                </li>
+              <li>
+                <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/scooter-80.jpg?width=80&height=80" alt="">
+                <span>充电宝</span>
+
+                </li>
+              <li>
+                <img src="https://i1.mifile.cn/f/i/g/2015/cn-index/scooter-80.jpg?width=80&height=80" alt="">
+                <span>平衡车配件</span>
+
+                </li>
+            </ul>
+          </li>
+          <li>智能&nbsp;&nbsp;路由器</li>
+          <li>电源&nbsp;&nbsp;配件</li>
+          <li>健康&nbsp;&nbsp;儿童</li>
+          <li>耳机&nbsp;&nbsp;音箱</li>
+          <li>生活&nbsp;&nbsp;箱包</li>
+        </ul>
+      <div class="image">
+        <input type="radio" name="image" id="img1" checked>
+        <img src="https://i1.mifile.cn/a4/xmad_15586661012003_thOfZ.jpg" alt="">
+        <input type="radio" name="image" id="img2">
+        <img src="https://i1.mifile.cn/a4/xmad_15587133207247_FmLpa.jpg" alt="">
+        <input type="radio" name="image" id="img3">
+        <img src="https://i1.mifile.cn/a4/xmad_15586683348207_opnBm.jpg" alt="">
+        <input type="radio" name="image" id="img4">
+        <img src="https://i1.mifile.cn/a4/xmad_15548066591437_Stxlj.jpg" alt="">
+        <input type="radio" name="image" id="img5">
+        <img src="https://i1.mifile.cn/a4/xmad_15369176983433_sWNIg.jpg" alt="">
+        
+      </div>
+      <div class="scroll-label">
+        <label for="img1"></label>
+        <label for="img2"></label>
+        <label for="img3"></label>
+        <label for="img4"></label>
+        <label for="img5"></label>
+      </div>
+    </div>
+  </div>
+  <style>
+    .firstad {
+      width: 1226px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .firstad img {
+      width: 1226px;
+    }
+  </style>
+  <div class="firstad" >
+    <img src="https://i1.mifile.cn/a4/xmad_15590330241391_fkvOo.jpg" alt="">
+  </div>
+
+
+  <style> 
+    .product-center {
+      width: 1226px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .product-center img:first-child {
+      width: 236px;
+      float: left;
+    }
+    .product-center .img {
+      width: 236px;
+      float: left;
+    }
+  </style>
+  <div class="product">
+    <div class="product-center">
+      <img src="https://i1.mifile.cn/a4/xmad_15589606696364_lPMvT.jpg" alt="">
+      <img src="https://i1.mifile.cn/a1/pms_1550642182.7527088!220x220.jpg" alt="" class="img">
+      <img src="https://i1.mifile.cn/a1/pms_1550642182.7527088!220x220.jpg" alt="" class="img">
+      <img src="https://i1.mifile.cn/a1/pms_1550642182.7527088!220x220.jpg" alt="" class="img">
+      <img src="https://i1.mifile.cn/a1/pms_1550642182.7527088!220x220.jpg" alt="" class="img">
+      <img src="https://i1.mifile.cn/a1/pms_1550642182.7527088!220x220.jpg" alt="" class="img">
+      <img src="https://i1.mifile.cn/a1/pms_1550642182.7527088!220x220.jpg" alt="" class="img">
+      <img src="https://i1.mifile.cn/a1/pms_1550642182.7527088!220x220.jpg" alt="" class="img">
+      <img src="https://i1.mifile.cn/a1/pms_1550642182.7527088!220x220.jpg" alt="" class="img">
+    </div>
+  </div>
+
+
+  
+</body>
+</html>
