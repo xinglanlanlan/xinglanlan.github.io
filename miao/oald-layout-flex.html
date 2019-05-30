@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>oald-layout-flex</title>
+</head>
+<style>
+  html,body {
+    height: 100%;
+    margin: 0;
+  }
+  section {
+    height: 100%;
+    display: flex;
+  }
+  section > div:first-child {
+    background-color: tan;
+    flex-grow: 1;
+  }
+  section > div:nth-child(2) {
+    flex-grow: 2;
+  }
+  section > div:nth-child(3) {
+    background-color: green;
+    flex-grow: 1;
+  }
+  section > div:nth-child(4) {
+    background-color: blue;
+    flex-grow: 1;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .content div:first-child {
+    background-color: red;
+    height: 100px;
+  }
+  .content div:last-child {
+    background-color: pink;
+    flex-grow: 5;
+  }
+</style>
+<body>
+  <section>
+  <div>oald7</div>
+  <div class="content">
+    <div>content</div>
+    <div></div>
+  </div>
+  <div>history</div>
+  <div>help</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>qq-mail-flex</title>
+  <style>
+    body,html {
+      margin: 0;
+      height: 100%;
+      color: #fff;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    section > div {
+      height: 100px;
+      background-color: red;
+    }
+    main {
+      display: flex;
+      flex-grow: 1;
+    }
+    main div:first-child {
+      flex-basis: 210px;
+      background-color: blue;
+    }
+    main div:last-child {
+      background-color: tan;
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div>邮箱首页</div>
+    <main>
+      <div>左侧边栏</div>
+      <div>内容</div>
+    </main>
+  </section>
+</body>
+</html>
