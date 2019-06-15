@@ -271,7 +271,6 @@
 <script type="" id="ch0104/14">
   var x = Number(prompt("Please input a number"))
   var ex = prompt("Whether to expedite?")
-  var m = Math.ceil((x - 1000) / 500) * 4
   if (x <= 1000) {
     if (ex == "n") {
       console.log(8)
@@ -280,8 +279,10 @@
     }
   }else {
      if (ex == "n") {
+      var m = Math.ceil((x - 1000) / 500) * 4
       console.log(m + 8)
     }else if (ex == "y") {
+      var m = Math.ceil((x - 1000) / 500) * 4
       console.log(m +8 + 5)
     }
   }
