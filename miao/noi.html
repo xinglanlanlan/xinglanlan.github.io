@@ -7,13 +7,13 @@
   var a = Number(prompt("Please input a"))
   var b = Number(prompt("Please input b"))
   var c = Number(prompt("Please input c"))
-  console.log(a + b * c)
+  console.log((a + b) * c)
 </script>
 <script type="x" id="ch0103/03">
   var a = Number(prompt("Please input a"))
   var b = Number(prompt("Please input b"))
   var c = Number(prompt("Please input c"))
-  console.log(a + b / c)
+  console.log((a + b) / c)
 </script>
 <script type="x" id="ch0103/04">
   var a = Number(prompt("Please input a"))
@@ -51,10 +51,10 @@
 </script>
 <script type="x" id="ch0103/09">
   var r = Number(prompt("Please input r"))
-  var rr = (2 * r).toFixed(4)
-  var l = (2 * Math.PI * r).toFixed(4)
-  var s = (Math.PI * r * r).toFixed(4)
-  console.log(rr)
+  var a = 2 * r.toFixed(4)
+  var l = 2 * Math.PI * r.toFixed(4)
+  var s = Math.PI * r * r.toFixed(4)
+  console.log(a)
   console.log(l)
   console.log(s)
 </script>
@@ -69,7 +69,7 @@
   var b = Number(prompt("Please input b"))
   var k = Math.floor(a / b)
   var r = a - k * b
-  console.log(r)
+  console.log(r.toFixed(4))
 </script>
 <script type="x" id="ch0103/12">
   var r = Number(prompt("Please input r"))
@@ -77,12 +77,12 @@
   var V = (4 / 3 * π * r * r * r).toFixed(2)
   console.log(V)
 </script>
-<script type="x" id="ch0103/13">
+<script type="X" id="ch0103/13">
   var x = Number(prompt("Please input a three-digit number"))
   var a = x % 10
   var b = ((x % 100) - a) / 10
   var c = (x - (x % 100)) / 100
-  console.log(a,b,c)
+  console.log(String(a) + String(b) + String(c))
 </script>
 <script type="x" id="ch0103/14">
   var h = Number(prompt("Please input h"))
@@ -189,10 +189,10 @@
     console.log("0")
   }
 </script>
-<script type="x" id="ch0104/07">
+<script type="X" id="ch0104/07">
   var fortune = Number(prompt("Please input a number"))
   var encourage = Number(prompt("Please input a number"))
-  if (fortune == 10 && encourage == 20) {
+  if (fortune >= 10 || encourage >= 20) {
     console.log("1")
   }else{
     console.log("0")
@@ -266,7 +266,7 @@
     console.log("NaN")
   }
 </script>
-<script type="" id="ch0104/14">
+<script type="x" id="ch0104/14">
   var x = Number(prompt("Please input a number"))
   var ex = prompt("Whether to expedite?")
   var ex = y
