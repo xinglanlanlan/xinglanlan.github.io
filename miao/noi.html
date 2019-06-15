@@ -268,12 +268,21 @@
     console.log("NaN")
   }
 </script>
-<script type="x" id="ch0104/14">
+<script type="" id="ch0104/14">
   var x = Number(prompt("Please input a number"))
   var ex = prompt("Whether to expedite?")
-  var ex = y
-  var ex = n
-  if (x <= 1000 && ex == n) {
+  var y = 5
+  var n = 0
+  var m = Math.ceil((x - 1000) / 5) * 4
+  if (x <= 1000 && ex == "n") {
     console.log(8 + 0)
-  
+  }else if (x <= 1000 && ex == "y") {
+    console.log(8 + 5)
+  }else if (x > 1000 && ex == "n") {
+    console.log(m + 8)
+  }else if (x > 1000 && ex == "y") {
+    console.log(m + 8 + 5)
+  }else {
+    console.log("Undefied")
+  }
 </script>
