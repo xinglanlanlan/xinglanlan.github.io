@@ -273,16 +273,20 @@
   var ex = prompt("Whether to expedite?")
   var y = 5
   var n = 0
-  var m = Math.ceil((x - 1000) / 5) * 4
-  if (x <= 1000 && ex == "n") {
-    console.log(8 + 0)
-  }else if (x <= 1000 && ex == "y") {
-    console.log(8 + 5)
-  }else if (x > 1000 && ex == "n") {
-    console.log(m + 8)
-  }else if (x > 1000 && ex == "y") {
-    console.log(m + 8 + 5)
+  var m = Math.ceil((x - 1000) / 500) * 4
+  if (x <= 1000) {
+    if (ex == "n") {
+      console.log(8)
+    }else if (ex == "y") {
+      console.log(8 + 5)
+    }
   }else {
-    console.log("Undefied")
+     if (ex == "n") {
+      console.log(m + 8)
+    }else if (ex == "y") {
+      console.log(m +8 + 5)
+    }
   }
 </script>
+
+  
