@@ -268,7 +268,7 @@
     console.log("NaN")
   }
 </script>
-<script type="" id="ch0104/14">
+<script type="x" id="ch0104/14">
   var x = Number(prompt("Please input a number"))
   var ex = prompt("Whether to expedite?")
   if (x <= 1000) {
@@ -283,8 +283,95 @@
       console.log(m + 8)
     }else if (ex == "y") {
       var m = Math.ceil((x - 1000) / 500) * 4
-      console.log(m +8 + 5)
+      console.log(m + 8 + 5)
     }
+  }
+</script>
+<script type="x" id="ch0104/15">
+  var x = Number(prompt("Please input a number"))
+  var y = Number(prompt("Please input a number"))
+  var z = Number(prompt("Please input a number"))
+  console.log(Math.max(x,y,z))
+</script>
+<script type="x" id="ch0104/16">
+  var x = Number(prompt("Please input a number"))
+  var y = Number(prompt("Please input a number"))
+  var z = Number(prompt("Please input a number"))
+  if ((x + y) > z && (x - y) < z && (x + z) > y && (x - z) < y && (z + y) > x && (z - y) < x) {
+    console.log("yes")
+  }else {
+    console.log("no")
+  }
+</script>
+<script type="x" id="ch0104/17">
+  var a = Number(prompt("Please input the year"))
+  if ((a % 4 == 0 && a % 100 != 0) || a % 400 == 0) {
+    console.log("yes")
+  }else {
+    console.log("no")
+  }
+</script>
+<script type="x" id="ch0104/18">
+  var x = Number(prompt("Please input x"))
+  var y = Number(prompt("Please input y"))
+  if (x >= -1 && x <= 1 && y >= -1 && y <= 1) {
+    console.log("yes")
+  }else {
+    console.log("no")
+  }
+</script>
+<script type="x" id="ch0104/19">
+  var x = Number(prompt("Please input x"))
+  var y = Number(prompt("Please input y"))
+  var o = prompt("Please input the operator")
+  if (o == "+") {
+    console.log(x + y)
+  }else if (o == "-") {
+    console.log(x - y)
+  }else if (o == "*") {
+    console.log(x * y)
+  }else if (o == "/") {
+    if (y == 0) {
+     console.log("Divided by zero!")
+    }else if (x != 0) {
+      console.log(x / y)
+    }
+  }else {
+    console.log("Invalid operator!")
+  }
+</script>
+<script type="" id="ch0104/20">
+  var a = Number(prompt("Please input a"))
+  var b = Number(prompt("Please input b"))
+  var c = Number(prompt("Please input c"))
+  var delter = b * b - 4 * a * c
+  if (delter == 0) {
+    var x1 = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a)
+    console.log("x1=x2=" + x1.toFixed(5))
+  }else if (delter > 0) {
+    var x1 = (-b + Math.sqrt(b * b-4 * a * c)) / (2 * a)
+    var x2 = (-b - Math.sqrt(b * b-4 * a * c)) / (2 * a)
+    console.log("x1=" + x1.toFixed(5))
+    console.log("x2=" + x2.toFixed(5))
+    console.log("x1 > x2")
+  }else {
+    var s = -b / (2 * a)
+    var x = Math.sqrt(4 * a * c - b * b) / (2 * a)
+    var x1 = s.toFixed(5) + "+" + x.toFixed(5) + "i"
+    var x2 = s.toFixed(5) + (-x).toFixed(5) + "i"
+    console.log(x1)
+    console.log(x2)
+  }
+</script>
+<script type="x" id="ch0104/21">
+  var n = Number(prompt("Please input n"))
+  var x = Number(prompt("Please input x"))
+  var y = Number(prompt("Please input y"))
+  var m = Math.floor(n - y / x)
+  if (y <= n * x) {
+    console.log(m)
+  }else {
+    console.log("Wrong number")
   }
 </script>
 
